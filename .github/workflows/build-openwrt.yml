@@ -131,8 +131,9 @@ jobs:
       if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       run: |
         cd openwrt/bin/
-	tar cvf packages.tar  packages/ 
-	mv packages.tar  targets/*/*
+	tar cvf packages.tar  packages/
+	
+        mv packages.tar  targets/*/*
         cd targets/*/*
 	tar cvf packages-target.tar  packages/
         rm -rf packages
