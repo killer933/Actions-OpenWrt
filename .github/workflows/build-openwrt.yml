@@ -132,8 +132,7 @@ jobs:
       run: |
         cd openwrt/bin/
 	tar cvf packages.tar  packages/
-	
-        mv packages.tar  targets/*/*
+	mv packages.tar  targets/*/*
         cd targets/*/*
 	tar cvf packages-target.tar  packages/
         rm -rf packages
